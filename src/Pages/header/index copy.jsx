@@ -10,15 +10,15 @@ export default function Header() {
           <Stack component='header' id='Hero' sx={{display: 'flex',
              flexDirection: {xs: 'column', lg: 'row-reverse'},
              alignItems: 'center',
-             color: 'white',
-             padding: {lg: '2em 5em'}
+             padding: {lg: '2em 5em'},
+             color: '#fff'
              }} >
-            <Box component='figure' sx={{ width: '100%'}}  >
+            <Box component='figure' sx={{width: '100%', 
+                zIndex: '1'}}  >
               <Box component='div' sx={{display: {xs: 'block', lg: 'none'}}}>
               <img src={bannerImage1} alt='none'/>
               </Box>
-              <Box component='div' sx={{display: {xs: 'none', lg: 'block'},
-               maxWidth: '200px', padding: '5rem'}} >
+              <Box component='div' sx={{display: {xs: 'none', lg: 'block'}, maxWidth: '200px', padding: '5rem'}} >
               <img src={ bannerImage2} alt='none'/>
               </Box>
             </Box>
@@ -27,9 +27,9 @@ export default function Header() {
                 flexDirection: 'column',
                 textAlign: {xs: 'center', lg: 'left'},
                 justifyContent: {xs: 'center', lg: 'flex-start'},
-                alignItems: {xs: 'center', lg: 'flex-start'},
+                alignItems:  {xs: 'center', lg: 'flex-start'},
                 padding: '2em',
-                zIndex: '2',
+                zIndex: '100',
                 height: {xs: '300px', lg: '400px'}}} className="banner-information-block">
                <Typography component='h1'>Humanizing your insurance.</Typography>
                <Typography component='p' margin='2em 0'>Get your life insurance coverage easier and faster. We blend our expertise 
