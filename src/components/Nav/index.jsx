@@ -15,7 +15,7 @@ export default function Nav() {
       <AppBar color='white' sx={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center',
          padding: {xs: '1em 1.4em', lg: '.7em 7em'}
          }} >
-          <Link href='#'><img src={Logo} /></Link>
+          <Link href='#' sx={{marginLeft: '1em'}}><img src={Logo} /></Link>
           <Button sx={{display: {lg: 'none'}}}   onClick={() => setTiggleMenu(prev => !prev) }>
              <img src={MenuI} alt='' />
           </Button>
