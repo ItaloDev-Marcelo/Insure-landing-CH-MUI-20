@@ -12,7 +12,7 @@ export default function Nav() {
    return (
      <>
       <Stack >
-      <AppBar color='inherit' sx={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center',
+      <AppBar  color='inherit' sx={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center',
          padding: {xs: '1em 1.4em', lg: '.7em 7em'}
          }} >
           <Link href='#' sx={{marginLeft: '1em'}}><img src={Logo} /></Link>

@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-size: 100%;
+  overflow-x: hidden;
 }
 
 .menu {
@@ -52,6 +53,11 @@ figure {
   justify-content: center;
 }
 
+#mobile-image img {
+  max-width: 100%;
+}
+
+
 figure div > img {
   position: relative;
   top: 2em;
@@ -68,16 +74,58 @@ figure div > img {
   align-content: center;
 }
 
+
+#banner-information-block {
+  background: url(./assets/img/bg-pattern-intro-left-mobile.svg),
+   url(./assets/img/bg-pattern-intro-right-mobile.svg);
+  background-repeat:  no-repeat, no-repeat;
+  background-size:35%, 25%;
+  background-position: top 0 left 0, right 0 bottom 0;
+}
+
+
+
 @media (min-width: 1200px) {
   .menu.active, .menu {
     display: none !important;
   }   
 
 
-  
-body #Hero {
+  #Hero{
+    width: 100vw;
+    height: 100%;
+    background-color: #fff;
+
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(./assets/img/bg-pattern-intro-left-desktop.svg), url(./assets/img/bg-pattern-intro-right-desktop.svg);
+    background-size: 10%, 30% 70%;
+    background-repeat: no-repeat, no-repeat;
+    background-position: top 95% left 0, top 0 right 0 ;
+    z-index: 10;
+    pointer-events: none; /* opcional: faz a camada não capturar cliques */
+  }
+
+  body #Hero {
   position: relative;
+  z-index: 1;
+  }
+  
+
+  
+#banner-information-block {
+  background: none,
+   none;
 }
+
+  
+  
 
 
 
@@ -91,7 +139,9 @@ body #Hero::before {
   width: 100%;
   height: 70vh;
   background-color: hsl(270, 9%, 17%);
+  
 }
+
 
 
 

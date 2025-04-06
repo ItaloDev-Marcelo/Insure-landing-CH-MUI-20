@@ -14,11 +14,11 @@ export default function Header() {
              padding: {lg: '2em 5em'}
              }} >
             <Box component='figure' sx={{ width: '100%'}}  >
-              <Box component='div' sx={{display: {xs: 'block', lg: 'none'}}}>
+              <Box component='div'  id='mobile-image' sx={{display: {xs: 'block', lg: 'none'}}}>
               <img src={bannerImage1} alt='none'/>
               </Box>
               <Box component='div' sx={{display: {xs: 'none', lg: 'block'},
-               maxWidth: '200px', padding: '5rem'}} >
+               maxWidth: '700px', padding: '5rem'}} >
               <img src={ bannerImage2} alt='none'/>
               </Box>
             </Box>
@@ -30,13 +30,14 @@ export default function Header() {
                 alignItems: {xs: 'center', lg: 'flex-start'},
                 padding: '2em',
                 zIndex: '2',
-                height: {xs: '300px', lg: '400px'}}} className="banner-information-block">
+                height: {xs: '300px', lg: '400px'}}} id="banner-information-block">
                <Typography component='h1'>Humanizing your insurance.</Typography>
                <Typography component='p' margin='2em 0'>Get your life insurance coverage easier and faster. We blend our expertise 
   and technology to help you find the plan that’s right for you. Ensure you 
   and your loved ones are protected.</Typography>
-               <BtnItem ButtonText='View Plans' size='250px' height='40px' ColorOfOutline='white' />
+               <BtnItem ButtonText='View Plans' size='170px' height='40px' ColorOfOutline='white' />
             </Stack>
+            <Stack className='overlay'></Stack>
           </Stack>
         </>
     )
