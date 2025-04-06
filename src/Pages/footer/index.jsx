@@ -1,6 +1,6 @@
 import {Stack, Typography, List, ListItem} from "@mui/material";
-
 import Grid from '@mui/material/Grid';
+
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import PinterestIcon from '@mui/icons-material/Pinterest';
@@ -8,10 +8,11 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 
 export default function Footer() {
     return (
-       <Stack component='footer'>
+       <>
+       <Stack component='footer' padding='1em 2.5em'>
            <Stack component='section'>
                 <Typography component='h5'></Typography>
-                <Stack className='row-icons'>
+                <Stack className='row-icons' display='row' flexDirection='row' justifyContent='space-between' padding='1em 3em'>
                    <FacebookIcon/>
                    <TwitterIcon/>
                    <PinterestIcon/>
@@ -55,6 +56,6 @@ export default function Footer() {
                   </List>
                </Grid>
            </Grid>
-       </Stack>
+       </Stack></>
     )
 }
