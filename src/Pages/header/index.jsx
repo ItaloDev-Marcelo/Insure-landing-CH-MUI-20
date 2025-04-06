@@ -35,7 +35,8 @@ export default function Header() {
                <Typography component='p' margin='2em 0'>Get your life insurance coverage easier and faster. We blend our expertise 
   and technology to help you find the plan that’s right for you. Ensure you 
   and your loved ones are protected.</Typography>
-               <BtnItem ButtonText='View Plans' size='170px' height='40px' ColorOfOutline='white' hoverBg='white' hoverText='black' />
+               <BtnItem ButtonText='View Plans' size='170px' height='40px' 
+               ColorOfOutline='white' hoverBg='white' hoverText='black' />
             </Stack>
             <Stack className='overlay'></Stack>
           </Stack>

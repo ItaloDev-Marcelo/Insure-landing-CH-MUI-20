@@ -51,8 +51,8 @@ export default function Main() {
                   }
                 </Stack>
                 <Stack component='article'>
-                 <Typography component='h2'></Typography>
-                 <BtnItem  ButtonText='View Plans' size='250px' height='40px' ColorOfOutline='white'/>
+                 <Typography component='h2'>Find out more about how we work</Typography>
+                 <BtnItem ButtonText='How we work' size='170px' height='40px'  ColorOfOutline='white' hoverBg='white' hoverText='black' />
                 </Stack>
              </Stack>
         </main>

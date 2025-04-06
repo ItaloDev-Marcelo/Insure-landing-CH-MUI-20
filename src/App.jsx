@@ -4,13 +4,16 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Nav from   './components/Nav/index'
 import Header from './Pages/header/index'
+import Main from './Pages/main'
+import Footer from './Pages/footer'
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
       <Nav />
       <Header/>
+      <Main/>
+      <Footer/>
     </>
   )
 }
