@@ -22,6 +22,7 @@
   height: 100vh;
   background-color: hsl(270, 9%, 17%);
   color: #fff;
+  z-index: 1000;
 }
 
 .menu.active::after {
@@ -35,6 +36,21 @@
   background: url(./assets/img/bg-pattern-mobile-nav.svg) no-repeat ;
   background-size: 100% ;
    background-position: top 5em center ;
+   
+}
+
+li {
+  cursor: pointer;
+}
+
+ul li {
+  
+  color: gray;
+  font-weight:500;
+}
+
+ul li:hover {
+  color: #fff;
 }
 
 #Hero{
@@ -89,6 +105,15 @@ figure div > img {
   .menu.active, .menu {
     display: none !important;
   }   
+
+  ul li {
+    font-weight:500;
+  }
+  
+  ul li:hover {
+    color: #000;
+  }
+  
 
 
   #Hero{

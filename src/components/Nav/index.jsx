@@ -20,12 +20,13 @@ export default function Nav() {
              <img src={MenuI} alt='' />
           </Button>
      <Stack component='nav'  display={{xs: 'none', lg: 'flex'}} flexDirection='row' alignItems='center'>
-           <List sx={{ display : {xs: 'none', lg: 'flex'}, width: '400px' }} >
+           <List sx={{ display : {xs: 'none', lg: 'flex'}, width: '500px' }} >
               <ListItem>How We Work</ListItem>
               <ListItem sx={{paddingLeft: '4em'}}>Blog</ListItem>
               <ListItem>Account</ListItem>
            </List>
-           <BtnItem ButtonText='View Plans' ColorOfOutline='white' size='170px' height='40px' />
+           <BtnItem ButtonText='View Plans' ColorOfOutline='black' size='170px' height='40px'
+             hoverBg='black' hoverText='white' />
        </Stack>
        
        </AppBar>
@@ -37,7 +38,8 @@ export default function Nav() {
               <ListItem>Blog</ListItem>
               <ListItem>Account</ListItem>
            </List>
-           <BtnItem ButtonText='View Plans' size='250px' height='40px' ColorOfOutline='white' />
+           <BtnItem ButtonText='View Plans' size='250px' height='40px' ColorOfOutline='white' 
+            hoverBg='white' hoverText='black' />
        </Stack>
       </Stack>
      </>
