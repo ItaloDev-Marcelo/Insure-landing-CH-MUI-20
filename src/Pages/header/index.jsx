@@ -30,10 +30,10 @@ export default function Header() {
                 alignItems: {xs: 'center', lg: 'flex-start'},
                 padding: '2em',
                 zIndex: '2',
-                height: {xs: '300px', lg: '400px'}}} id="banner-information-block">
-               <Typography component='h1' width={{lg: '370px'}} overflow='hidden'
+                height: {xs: '470px', lg: '400px'}}} id="banner-information-block">
+               <Typography component='h1' width={{lg: '370px'}} 
                 padding={{xs: '0 2em', lg: '0'}}
-                fontSize={{xs: '1.7em', lg: '3.7em'}}
+                fontSize={{xs: '2em', lg: '3.7em'}}
                 lineHeight={{lg: '55px'}}
                 >Humanizing your insurance.</Typography>
                <Typography component='p' overflow='hidden'
