@@ -13,16 +13,17 @@ export default function Nav() {
      <>
       <Stack >
       <AppBar  color='inherit' sx={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center',
-         padding: {xs: '1em 1.4em', lg: '.7em 7em'}
+         padding: {xs: '1em 1.4em', lg: '.7em 11em'}
          }} >
           <Link href='#' sx={{marginLeft: '1em'}}><img src={Logo} /></Link>
           <Button sx={{display: {lg: 'none'}}}   onClick={() => setTiggleMenu(prev => !prev) }>
              <img src={MenuI} alt='' />
           </Button>
-     <Stack component='nav'  display={{xs: 'none', lg: 'flex'}} flexDirection='row' alignItems='center'>
-           <List sx={{ display : {xs: 'none', lg: 'flex'}, width: '500px' }} >
-              <ListItem>How We Work</ListItem>
-              <ListItem sx={{paddingLeft: '4em'}}>Blog</ListItem>
+     <Stack component='nav'  display={{xs: 'none', lg: 'flex'}} 
+     flexDirection='row' alignItems='center'>
+           <List sx={{ display : {xs: 'none', lg: 'flex'}, width: '400px' }} >
+              <ListItem sx={{position: 'relative', left: '2em'}} >How We Work</ListItem>
+              <ListItem sx={{position: 'relative', left: '3em'}}>Blog</ListItem>
               <ListItem>Account</ListItem>
            </List>
            <BtnItem ButtonText='View Plans' ColorOfOutline='black' size='170px' height='40px'

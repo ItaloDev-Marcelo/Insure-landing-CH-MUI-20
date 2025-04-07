@@ -11,9 +11,9 @@ export default function Header() {
              flexDirection: {xs: 'column', lg: 'row-reverse'},
              alignItems: 'center',
              color: 'white',
-             padding: {lg: '2em 5em'}
+             padding: {lg: '2em 10em'}
              }} >
-            <Box component='figure' sx={{ width: '100%'}}  >
+            <Box className='banner-container' sx={{ width: '100%'}}  >
               <Box component='div'  id='mobile-image' sx={{display: {xs: 'block', lg: 'none'}}}>
               <img src={bannerImage1} alt='none'/>
               </Box>
@@ -31,8 +31,15 @@ export default function Header() {
                 padding: '2em',
                 zIndex: '2',
                 height: {xs: '300px', lg: '400px'}}} id="banner-information-block">
-               <Typography component='h1'>Humanizing your insurance.</Typography>
-               <Typography component='p' margin='2em 0'>Get your life insurance coverage easier and faster. We blend our expertise 
+               <Typography component='h1' width={{lg: '370px'}} overflow='hidden'
+                padding={{xs: '0 2em', lg: '0'}}
+                fontSize={{xs: '1.7em', lg: '3.7em'}}
+                lineHeight={{lg: '55px'}}
+                >Humanizing your insurance.</Typography>
+               <Typography component='p' overflow='hidden'
+                margin={{xs: '2em 0', lg: '2em 0'}}
+              paddingRight={{lg: '7rem'}}
+                >Get your life insurance coverage easier and faster. We blend our expertise 
   and technology to help you find the plan that’s right for you. Ensure you 
   and your loved ones are protected.</Typography>
                <BtnItem ButtonText='View Plans' size='170px' height='40px' 

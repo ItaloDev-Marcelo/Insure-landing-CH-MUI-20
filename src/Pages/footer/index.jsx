@@ -12,12 +12,17 @@ export default function Footer() {
        <>
        <Stack component='footer' padding='1em 2.5em'>
            <Stack component='section'>
-                <Stack display='flex' flexDirection={{xs: 'column', lg: 'row'}} justifyContent={{xs: 'center', lg: 'flex-start'}} >
-                <Stack className="footer-logo">
+                <Stack display='flex' flexDirection={{xs: 'column', lg: 'row'}} 
+                justifyContent={{xs: 'center', lg: 'space-between'}}
+                margin={{lg: '2em 0'}}
+                >
+                <Stack className="footer-logo" alignSelf='center'>
                   <img src={Logo} alt='' />
                 </Stack>
                 <Stack className='row-icons' display='row' 
-                flexDirection='row' justifyContent={{xs: 'space-between', lg: 'flex-start'}} padding='1em 3em'>
+                flexDirection='row' justifyContent={{ lg: 'flex-start'}}
+                alignSelf={{xs: 'center' }}
+                padding='1em 0'>
                    <FacebookIcon/>
                    <TwitterIcon/>
                    <PinterestIcon/>
@@ -26,6 +31,7 @@ export default function Footer() {
                 </Stack>
                 <hr/>
            </Stack>
+           <Stack margin={{lg: '2em 0'}}  paddingRight={{lg: '7rem'}} >
            <Grid  container  >
                <Grid size={{xs: 12, lg: 3}}>
                   <List className='footer-list'>
@@ -62,6 +68,7 @@ export default function Footer() {
                   </List>
                </Grid>
            </Grid>
+           </Stack>
        </Stack></>
     )
 }

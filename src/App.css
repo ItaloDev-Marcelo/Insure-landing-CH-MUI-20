@@ -1,3 +1,5 @@
+/*reset css*/
+
 * {
   margin: 0;
   padding: 0;
@@ -21,6 +23,9 @@ body {
 p {
   color: var(--Dark-Grayish-Violet);
 }
+
+
+/*Menu mobile*/
 
 .menu {
   display: none !important;
@@ -55,6 +60,8 @@ p {
    
 }
 
+/*menu itens*/
+
 li {
   cursor: pointer;
 }
@@ -69,6 +76,8 @@ ul li:hover {
   color: #fff;
 }
 
+/*banner*/
+
 #Hero{
   width: 100vw;
   height: 100%;
@@ -76,15 +85,7 @@ ul li:hover {
 }
 
 
-.cart-icon  img{
-  max-width: 100%;
-  margin: 1.4em 0;
-}
-
-
-
-
-figure {
+.banner-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -95,10 +96,20 @@ figure {
 }
 
 
-figure div > img {
+
+.banner-container div > img {
   position: relative;
   top: 2em;
-  width: 390px;
+  width: 100%;
+}
+
+
+#banner-information-block {
+  background: url(./assets/img/bg-pattern-intro-left-mobile.svg),
+   url(./assets/img/bg-pattern-intro-right-mobile.svg);
+  background-repeat:  no-repeat, no-repeat;
+  background-size:35%, 25%;
+  background-position: top 0 left 0, right 0 bottom 0;
 }
 
 
@@ -110,6 +121,15 @@ figure div > img {
   flex-direction: column; 
   align-content: center;
 }
+
+
+/*mini-cards and mini-icons*/
+
+.cart-icon  img{
+  max-width: 100%;
+  margin: 1.4em 0;
+}
+
 
 
 .mini-box {
@@ -126,14 +146,6 @@ figure div > img {
   margin: 2em 0;
 }
 
-
-#banner-information-block {
-  background: url(./assets/img/bg-pattern-intro-left-mobile.svg),
-   url(./assets/img/bg-pattern-intro-right-mobile.svg);
-  background-repeat:  no-repeat, no-repeat;
-  background-size:35%, 25%;
-  background-position: top 0 left 0, right 0 bottom 0;
-}
 
 #about-title {
   position: relative;
@@ -155,7 +167,15 @@ figure div > img {
 
 .footer-logo img {
   max-width: 100%;
+  width: 75%;
+  
+}
 
+.footer-list li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -229,13 +249,13 @@ body #Hero::before {
 
 
 
-figure {
+.banner-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-figure div > img {
+.banner-container div > img {
   position: relative;
   top: 2em;
   width: 390px;
@@ -278,6 +298,13 @@ figure div > img {
 
 .row-icons svg {
   margin: 0 .2em;
+}
+
+.footer-list li {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 }

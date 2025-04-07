@@ -35,10 +35,16 @@ export default function Main() {
                     })
                   }
                 </Stack>
-                <Stack component='article' className='mini-box' sx={{ width: {xs: '400px', lg: '700px'}, 
-                height: {xs: '300px', lg: '250px'}}} margin={{xs: '2em auto', lg: '7em auto 1em auto'}}>
-                 <Typography component='h2'>Find out more about how we work</Typography>
-                 <BtnItem ButtonText='How we work' size='170px' height='40px'  ColorOfOutline='white' hoverBg='white' hoverText='black' />
+                <Stack component='article' className='mini-box'
+                 sx={{ width: {xs: '300px', lg: '800px'}, 
+                height: {xs: '250px', lg: '250px'}}} 
+                margin={{xs: '5rem auto', lg: '7rem auto 5rem auto'}}>
+                 <Typography component='h2' 
+                  padding={{xs: '0 2em'}} width={{lg: '500px'}} 
+                  fontSize={{xs: '1.5em', lg: '2.4em'}} textAlign={{lg: 'left'}}>Find out more about how we work</Typography>
+                <Stack marginRight={{lg: '1.3em'}}>
+                <BtnItem ButtonText='How we work' size='170px' height='40px' ColorOfOutline='white' hoverBg='white' hoverText='black' />
+                </Stack>
                 </Stack>
              </Stack>
         </main>
