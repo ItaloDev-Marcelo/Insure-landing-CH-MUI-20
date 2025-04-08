@@ -2,6 +2,7 @@ import { AppBar, Link, Button, Stack, List, ListItem} from '@mui/material';
 
 import Logo from '../../assets/img/logo.svg';
 import MenuI from '../../assets/img/icon-hamburger.svg'
+import closeI from '../../assets/img/icon-close.svg'
 import BtnItem from '../btn';
 import { useState } from 'react';
 
@@ -17,16 +18,19 @@ export default function Nav() {
          }} >
           <Link href='#' sx={{marginLeft: '1em'}}><img src={Logo} /></Link>
           <Button sx={{display: {lg: 'none'}}}   onClick={() => setTiggleMenu(prev => !prev) }>
-             <img src={MenuI} alt='' />
+            {
+               toggleMenu ?   <img src={closeI} alt='' /> : <img src={MenuI} alt='' />
+            }
           </Button>
      <Stack component='nav'  display={{xs: 'none', lg: 'flex'}} 
      flexDirection='row' alignItems='center'>
-           <List sx={{ display : {xs: 'none', lg: 'flex'}, width: '400px' }} >
-              <ListItem sx={{position: 'relative', left: '2em'}} >How We Work</ListItem>
-              <ListItem sx={{position: 'relative', left: '3em'}}>Blog</ListItem>
-              <ListItem>Account</ListItem>
+           <List sx={{ display : {xs: 'none', lg: 'flex'}, width: '500px' }} >
+              <ListItem sx={{ position: 'relative', left: '10em'}}   >How We Work</ListItem>
+              <ListItem sx={{ width: 100}} >Blog</ListItem>
+              <ListItem sx={{ width: 200}} >Account</ListItem>
            </List>
-           <BtnItem ButtonText='View Plans' ColorOfOutline='black' size='170px' height='40px'
+           <BtnItem ButtonText='View Plans'
+            ColorOfOutline='black' size='170px' height='40px'
              hoverBg='black' hoverText='white' />
        </Stack>
        

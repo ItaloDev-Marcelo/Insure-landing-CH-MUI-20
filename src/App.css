@@ -6,6 +6,7 @@
   box-sizing: border-box;
   font-size: 100%;
   overflow-x: hidden;
+  font-family: "Karla", sans-serif;
 }
 
 body {
@@ -13,15 +14,40 @@ body {
 }
 
 :root {
---Dark-Violet: hsl(256, 26%, 20%);
---Grayish-Blue: hsl(216, 30%, 68%);
---Very-Dark-Violet: hsl(270, 9%, 17%);
---Dark-Grayish-Violet: hsl(273, 4%, 51%);
---Very-Light-Gray: hsl(0, 0%, 98%);
+  --Dark-Violet: hsl(256, 26%, 20%);
+  --Grayish-Blue: hsl(216, 30%, 68%);
+  --Very-Dark-Violet: hsl(270, 9%, 17%);
+  --Dark-Grayish-Violet: hsl(273, 4%, 51%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
 }
 
-p {
+
+svg {
   color: var(--Dark-Grayish-Violet);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "DM Serif Display", serif !important;
+  font-weight: 400 !important;
+
+  overflow: hidden;
+}
+
+
+
+li,
+button,
+svg {
+  cursor: pointer;
+}
+
+hr {
+  opacity: .2 !important;
+  border-width: 2px;
 }
 
 
@@ -36,17 +62,21 @@ p {
   justify-content: flex-start;
   padding-top: 2.5em;
   align-items: center;
-  text-align: center ;
+  text-align: center;
   position: fixed;
   top: 5em;
   width: 100vw;
-  height: 100vh;
-  background-color: hsl(270, 9%, 17%);
+  height: 100%;
+  background: url(./assets/img/bg-pattern-mobile-nav.svg) no-repeat hsl(270, 9%, 17%);
+  background-size: 100%;
+  background-position: bottom 4em center;
+  background-repeat: no-repeat;
   color: #fff;
   z-index: 1000;
 }
 
-.menu.active::after {
+
+/* .menu.active::after {
   content: '';
   display: block;
   position: absolute;
@@ -58,7 +88,7 @@ p {
   background-size: 100% ;
    background-position: top 5em center ;
    
-}
+} */
 
 /*menu itens*/
 
@@ -67,9 +97,11 @@ li {
 }
 
 ul li {
-  
-  color: gray;
-  font-weight:500;
+
+  color: --Very-Light-Gray;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 ul li:hover {
@@ -78,7 +110,7 @@ ul li:hover {
 
 /*banner*/
 
-#Hero{
+#Hero {
   width: 100vw;
   height: 100%;
   background-color: hsl(270, 9%, 17%);
@@ -97,7 +129,7 @@ ul li:hover {
 
 
 
-.banner-container div > img {
+.banner-container div>img {
   position: relative;
   top: 2em;
   width: 100%;
@@ -105,27 +137,49 @@ ul li:hover {
 
 
 #banner-information-block {
-  background: url(./assets/img/bg-pattern-intro-left-mobile.svg),
-   url(./assets/img/bg-pattern-intro-right-mobile.svg);
-  background-repeat:  no-repeat, no-repeat;
-  background-size:35%, 25%;
-  background-position: top 0 left 0, right 0 bottom 0;
+  background: url(./assets/img/bg-pattern-intro-left-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: 35%;
+  background-position: top 0 left 0;
 }
 
 
 
-#center li{
+
+.overlay0 {
+  position: absolute;
+  top: 55%;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(./assets/img/bg-pattern-intro-right-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: 27%;
+  background-position: right 0 top 30em;
+  z-index: 10;
+  pointer-events: none;
+  /* opcional: faz a camada não capturar cliques */
+}
+
+main #about {
+  position: relative;
+  z-index: 1;
+}
+
+
+
+#center li {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column; 
+  flex-direction: column;
   align-content: center;
 }
 
 
 /*mini-cards and mini-icons*/
 
-.cart-icon  img{
+.cart-icon img {
   max-width: 100%;
   margin: 1.4em 0;
 }
@@ -139,7 +193,11 @@ ul li:hover {
   align-items: center;
   text-align: center;
   color: #fff;
-  background-color:  hsl(256, 26%, 20%);
+  background-color: hsl(256, 26%, 20%);
+  background-image: url(./assets/img/bg-pattern-how-we-work-mobile.svg);
+  background-size: contain;
+  background-position: right 0 top 0;
+  background-repeat: no-repeat;
 }
 
 .mini-box button {
@@ -165,10 +223,19 @@ ul li:hover {
 }
 
 
+footer {
+  background-color: var(--Very-Light-Gray);
+  background-image: url(./assets/img/bg-pattern-footer-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 15%;
+  background-position: top 0 left 0;
+}
+
+
 .footer-logo img {
   max-width: 100%;
-  width: 75%;
-  
+  margin: 1em 0;
+
 }
 
 .footer-list li {
@@ -179,22 +246,61 @@ ul li:hover {
 }
 
 
+.row-icons svg {
+  margin: 0 .5em;
+}
+
+.row-icons svg:hover {
+
+  color: var(--Dark-Violet);
+}
+
+.footer-list li {
+  color: var(--Dark-Violet);
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.footer-list li:nth-of-type(1) {
+  color: var(--Dark-Grayish-Violet);
+}
+
+.footer-list li:hover {
+  color: var(--Dark-Grayish-Violet);
+}
+
+.footer-list li:nth-of-type(1):hover {
+  color: var(--Dark-Violet);
+}
+
+
+
+
+
+
+
 @media (min-width: 1200px) {
-  .menu.active, .menu {
+
+  .menu.active,
+  .menu {
     display: none !important;
-  }   
+  }
+
+
 
   ul li {
-    font-weight:500;
+    color: var(--Dark-Grayish-Violet);
+    font-weight: 500;
   }
-  
+
+
   ul li:hover {
     color: #000;
   }
-  
 
 
-  #Hero{
+
+  #Hero {
     width: 100vw;
     height: 100%;
     background-color: #fff;
@@ -210,101 +316,123 @@ ul li:hover {
     background: url(./assets/img/bg-pattern-intro-left-desktop.svg), url(./assets/img/bg-pattern-intro-right-desktop.svg);
     background-size: 10%, 30% 70%;
     background-repeat: no-repeat, no-repeat;
-    background-position: top 95% left 0, top 0 right 0 ;
+    background-position: top 95% left 0, top 0 right 0;
     z-index: 10;
-    pointer-events: none; /* opcional: faz a camada não capturar cliques */
+    pointer-events: none;
+    /* opcional: faz a camada não capturar cliques */
   }
 
   body #Hero {
-  position: relative;
-  z-index: 1;
+    position: relative;
+    z-index: 1;
   }
-  
-
-  
-#banner-information-block {
-  background: none,
-   none;
-}
-
-  
-  
 
 
 
-
-body #Hero::before {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 70vh;
-  background-color: hsl(270, 9%, 17%);
-  
-}
-
-
-
-
-
-.banner-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.banner-container div > img {
-  position: relative;
-  top: 2em;
-  width: 390px;
-}
-
-
-.cart-icon  img{
-  max-width: 25%;
-}
-
-
-.mini-box {
-
-  flex-direction: row !important;
-  justify-content: space-between;
-
-  padding: 0 2.5em;
-}
-
-.mini-box button {
-  margin: 0;
-}
+  #banner-information-block {
+    background: none,
+      none;
+  }
 
 
 
 
 
 
-#about-title::before {
-  content: '';
-  position: absolute;
-  top: .1em;
-  left: 0;
-  display: inline-block;
-  width: 9%;
-  height: 2px;
-}
+
+  body #Hero::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70vh;
+    background-color: hsl(270, 9%, 17%);
+
+  }
+
+
+  .banner-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .banner-container div img {
+    position: relative;
+    top: 2em;
+    width: 390px;
+  }
+
+
+  .cart-icon img {
+    max-width: 25%;
+  }
+
+
+  .mini-box {
+
+    flex-direction: row !important;
+    justify-content: space-between;
+
+    padding: 0 2.5em;
+
+    background-image: url(./assets/img/bg-pattern-how-we-work-desktop.svg);
+    background-size: 47% 100%;
+  }
+
+  .mini-box button {
+    margin: 0;
+  }
 
 
 
-.row-icons svg {
-  margin: 0 .2em;
-}
 
-.footer-list li {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
+
+
+  #about-title::before {
+    content: '';
+    position: absolute;
+    top: .1em;
+    left: 0;
+    display: inline-block;
+    width: 15%;
+    height: 2px;
+  }
+
+
+
+  .row-icons svg {
+    margin: 0 .2em;
+  }
+
+  .footer-list li {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+
+
+  .footer-logo img {
+    width: 75%;
+    margin: 0;
+
+  }
+
+
+  footer {
+    background-image: url(./assets/img/bg-pattern-footer-desktop.svg);
+    background-size: 35%;
+  }
+
+
+  .overlay0 {
+    background-image: none;
+  }
+
+
 
 }

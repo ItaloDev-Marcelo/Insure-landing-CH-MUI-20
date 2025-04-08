@@ -31,12 +31,15 @@ export default function Header() {
                 padding: '2em',
                 zIndex: '2',
                 height: {xs: '470px', lg: '400px'}}} id="banner-information-block">
-               <Typography component='h1' width={{lg: '370px'}} 
+               <Typography variant='h1' width={{lg: '370px'}} 
                 padding={{xs: '0 2em', lg: '0'}}
                 fontSize={{xs: '2em', lg: '3.7em'}}
                 lineHeight={{lg: '55px'}}
+                overflow='hidden'
                 >Humanizing your insurance.</Typography>
-               <Typography component='p' overflow='hidden'
+
+                
+               <Typography variant='p' 
                 margin={{xs: '2em 0', lg: '2em 0'}}
               paddingRight={{lg: '7rem'}}
                 >Get your life insurance coverage easier and faster. We blend our expertise 

@@ -10,14 +10,15 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 export default function Footer() {
     return (
        <>
-       <Stack component='footer' padding='1em 2.5em'>
+       <Stack component='footer' padding={{xs: '1em 2.5em', lg: '1em 12em 1em 12em'}}  >
            <Stack component='section'>
                 <Stack display='flex' flexDirection={{xs: 'column', lg: 'row'}} 
                 justifyContent={{xs: 'center', lg: 'space-between'}}
-                margin={{lg: '2em 0'}}
+                
+                margin='1em 0'
                 >
-                <Stack className="footer-logo" alignSelf='center'>
-                  <img src={Logo} alt='' />
+                <Stack className="footer-logo"  alignSelf='center'>
+                  <img  src={Logo} alt='' />
                 </Stack>
                 <Stack className='row-icons' display='row' 
                 flexDirection='row' justifyContent={{ lg: 'flex-start'}}
@@ -31,10 +32,10 @@ export default function Footer() {
                 </Stack>
                 <hr/>
            </Stack>
-           <Stack margin={{lg: '2em 0'}}  paddingRight={{lg: '7rem'}} >
+           <Stack margin={{xs: '1em 0', lg: '2em 0'}}  paddingRight={{lg: '0'}} >
            <Grid  container  >
                <Grid size={{xs: 12, lg: 3}}>
-                  <List className='footer-list'>
+                  <List className='footer-list' sx={{marginLeft: '-1em'}}>
                      <ListItem sx={{marginBottom: '1em'}}>Our company</ListItem>
                      <ListItem> How we work</ListItem>
                      <ListItem>Why Insure?</ListItem>
